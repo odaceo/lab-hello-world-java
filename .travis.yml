@@ -7,7 +7,8 @@ cache:
   directories:
     - '$HOME/.m2/repository'
 
-script: mvn clean package
+script: 
+  - mvn clean package
 
 deploy:
   provider: bintray
