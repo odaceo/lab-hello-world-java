@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ch.odaceo.lab.hello-world</groupId>
+    <artifactId>hello-world</artifactId>
+    <version>0.1.0</version>
+    <packaging>jar</packaging>
+
+    <name>Lab :: Hello World</name>
+    <description>A simple Java application on Linux.</description>
+    <url>https://github.com/odaceo/lab-hello-world-java</url>
+    <inceptionYear>2017</inceptionYear>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>ch.odaceo.helloworld.interfaces.console.Program</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>LATEST</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+	
+    <organization>
+        <name>Odaceo</name>
+        <url>http://odaceo.ch</url>
+    </organization>    
+
+    <developers>
+        <developer>
+            <id>alexandre.garino</id>
+            <name>Alexandre GARINO</name>
+            <email>alexandre.garino@odaceo.ch</email>
+            <timezone>Europe/Zurich</timezone>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>GitHub Issues</system>        
+        <url>https://github.com/odaceo/lab-hello-world-java/issues</url>
+    </issueManagement>
+  
+    <scm>
+        <url>https://github.com/odaceo/lab-hello-world-java</url>
+        <connection>scm:git:git://github.com/odaceo/lab-hello-world-java.git</connection>
+        <developerConnection>scm:git:git@github.com:odaceo/lab-hello-world-java.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>    
+  
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/odaceo/lab-hello-world-java</url>
+        <notifiers />
+    </ciManagement>
+        
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+</project>

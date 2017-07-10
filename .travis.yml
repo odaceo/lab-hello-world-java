@@ -1,0 +1,16 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+
+script: mvn clean package
+
+deploy:
+  provider: bintray
+  file: bintray.json
+  user: ${BINTRAY_USER}
+  key: ${BINTRAY_PASS}

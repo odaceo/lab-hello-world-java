@@ -1,0 +1,31 @@
+{
+    "package": {
+        "name": "lab-hello-world-java",
+        "repo": "generic",
+        "subject": "odaceo",
+        "desc": "A simple Java application on Linux.",
+        "website_url": "https://github.com/odaceo/lab-hello-world-java",
+        "issue_tracker_url": "https://github.com/odaceo/lab-hello-world-java/issues",
+        "vcs_url": "https://github.com/odaceo/lab-hello-world-java.git",
+        "licenses": ["Apache-2.0"],
+        "public_download_numbers": true,
+        "public_stats": true
+    },
+
+    "version": {
+        "name": "0.1.0",
+        "gpgSign": false
+    },
+
+    "files": [
+        {
+            "includePattern": "target/hello-world-0.1.0-jar-with-dependencies.jar", 
+            "uploadPattern": "/hello.jar",
+            "matrixParams": {
+                "override": 1 
+            }
+        }
+    ],
+
+    "publish": true
+}
