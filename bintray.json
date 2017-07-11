@@ -20,7 +20,7 @@
     "files": [
         {
             "includePattern": "target/hello-world-0.1.0-jar-with-dependencies.jar", 
-            "uploadPattern": "hello.jar",
+            "uploadPattern": "/lab-hello-world-java/0.1.0/hello.jar",
             "matrixParams": {
                 "override": 1 
             }
