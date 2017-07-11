@@ -13,14 +13,14 @@
     },
 
     "version": {
-        "name": "0.1.0",
+        "name": "master",
         "gpgSign": false
     },
 
     "files": [
         {
-            "includePattern": "target/hello-world-0.1.0-jar-with-dependencies.jar", 
-            "uploadPattern": "/lab-hello-world-java/0.1.0/hello.jar",
+            "includePattern": "target/.*-jar-with-dependencies.jar", 
+            "uploadPattern": "/lab-hello-world-java/master/hello.jar",
             "matrixParams": {
                 "override": 1 
             }
