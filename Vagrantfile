@@ -20,5 +20,8 @@ Vagrant.configure(2) do |config|
   config.vm.box = "bento/ubuntu-16.04"
 
   config.vm.provision "shell", privileged: false, 
-    path: "https://github.com/odaceo/script-ubuntu-java/raw/master/install.sh"
+    path: "https://github.com/odaceo/script-ubuntu-oraclejdk/raw/master/install.sh"
+
+  config.vm.provision "shell", privileged: false, 
+    path: "https://github.com/odaceo/script-ubuntu-maven/raw/master/install.sh"
 end
